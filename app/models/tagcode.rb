@@ -1,0 +1,2 @@
+class Tagcode < ApplicationRecord
+end

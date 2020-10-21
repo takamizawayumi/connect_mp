@@ -1,0 +1,10 @@
+.connect_main
+  .message_field
+  .Footer
+    = form_with model: [@tag, @message], html: {class: "form"}, local: true do |f|
+      .input_box
+        = f.text_field :content, class: 'Content', placeholder: 'type a message'
+        = f.label :image, class: 'Image' do
+          = icon('far', 'image', class: 'icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'submit'   
